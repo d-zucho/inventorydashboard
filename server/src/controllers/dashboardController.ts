@@ -63,3 +63,6 @@ export const getDashboardMetrics = async (
       .json({ error: 'An error occurred while fetching dashboard metrics' })
   }
 }
+
+// a controller is a function that is used to handle a request
+// vs a route which is used to set up a route

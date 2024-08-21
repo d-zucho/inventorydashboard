@@ -5,6 +5,7 @@ import bodyParser from 'body-parser'
 import helmet from 'helmet'
 import morgan from 'morgan'
 //  ROUTE IMPORTS
+import dashboardRoutes from './routes/dashboardRoutes'
 
 // CONFIGURATIONS
 dotenv.config()
@@ -18,9 +19,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(cors())
 
 // ROUTES
-app.get('/hello', (req, res) => {
-  res.send('Hello World')
-})
+// this sets up the route for the dashboard
+// dashboardRoutes is the router that was exported from the dashboardRoutes.ts file
+// app.use is used to set up the route
+// vs. app.get is used to set up a route that only accepts GET requests
+app.use('/dashboard', dashboardRoutes)
 
 // SERVER
 const PORT = process.env.PORT || 3001

@@ -63,3 +63,5 @@ const getDashboardMetrics = (req, res) => __awaiter(void 0, void 0, void 0, func
     }
 });
 exports.getDashboardMetrics = getDashboardMetrics;
+// a controller is a function that is used to handle a request
+// vs a route which is used to set up a route
