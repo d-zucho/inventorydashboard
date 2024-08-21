@@ -13,6 +13,8 @@ const Sidebar = () => {
   const toggleSidebar = () => {
     dispatch(setIsSidebarCollapsed(!isSidebarCollapsed))
   }
+  // to toggle the sidebar, we dispatch the setIsSidebarCollapsed action with the opposite of the current isSidebarCollapsed value
+  // the better way to do is to use the setIsSidebarCollapsed action creator that we created in the globalSlice
 
   const sidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? 'w-0 md:w-16' : 'w-72 md:w-64'
@@ -35,7 +37,7 @@ const Sidebar = () => {
         </h1>
         <button
           className='md:hidden px-3 py-3 bg-gray-100 rounded-full hover:bg-blue-100'
-          onClick={() => toggleSidebar()}
+          onClick={toggleSidebar}
         >
           <Menu className='w-4 h-4' />
         </button>

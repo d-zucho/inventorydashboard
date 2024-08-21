@@ -22,7 +22,6 @@ import {
 } from 'redux-persist'
 import { PersistGate } from 'redux-persist/integration/react'
 import createWebStorage from 'redux-persist/lib/storage/createWebStorage'
-// have to install  redux-persist and reduxjs/toolkit like :
 
 /* REDUX PERSISTENCE */
 const createNoopStorage = () => {

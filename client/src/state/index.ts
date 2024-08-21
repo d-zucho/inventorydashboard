@@ -10,17 +10,15 @@ const initialState: InitialStateTypes = {
   isDarkMode: false,
 }
 
-// *Global Slice
 export const globalSlice = createSlice({
-  name: 'global', // this is the name of the slice
-  initialState, // initial state
+  name: 'global',
+  initialState,
   reducers: {
     setIsSidebarCollapsed: (state, action: PayloadAction<boolean>) => {
       state.isSidebarCollapsed = action.payload
-      // this basically means that the state.isSidebarCollapsed will be set to the payload . payload is the value that is passed to the action
     },
     setIsDarkMode: (state, action: PayloadAction<boolean>) => {
-      state.isSidebarCollapsed = action.payload
+      state.isDarkMode = action.payload
     },
   },
 })
